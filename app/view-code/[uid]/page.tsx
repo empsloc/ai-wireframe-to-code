@@ -106,10 +106,10 @@ function ViewCode() {
     console.log(result);
   };
   return (
-    <div>
+    <div className="min-h-screen flex flex-col bg--400">
       <MobileAppHeader />
-      <div className="grid grid-cols-1 md:grid-cols-5 p-5 gap-10">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-5 p-5 gap-10 bg--500  min-h-screen flex-1">
+        <div className="min-h-screen bg--700">
           {/* Selections details */}
           <SelectionDetail
             isReady={isReady}
@@ -117,7 +117,7 @@ function ViewCode() {
             record={record}
           />
         </div>
-        <div className="md:col-span-4">
+        <div className="md:col-span-4 bg--300 ">
           {/* Code editor */}
           {loading ? (
             <div>

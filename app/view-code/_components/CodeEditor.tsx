@@ -10,16 +10,19 @@ import { aquaBlue } from "@codesandbox/sandpack-themes";
 
 function CodeEditor({ codeResp, readyForDB }: any) {
   return (
-    <div>
+    <div className="h-full bg--900 ">
       {readyForDB ? (
+        
         <Sandpack
           template="react"
           theme={aquaBlue}
+          
           options={{
             externalResources: ["https://cdn.tailwindcss.com"],
             showNavigator: true,
             showTabs: true,
-            editorHeight: 600,
+            editorHeight: 900
+            
           }}
           customSetup={{
             dependencies: {
@@ -28,6 +31,8 @@ function CodeEditor({ codeResp, readyForDB }: any) {
           }}
           files={{"/App.js":{code:`${codeResp}`}}}
         />
+        
+
       ) :<div>Loading your code</div>}
     </div>
   );

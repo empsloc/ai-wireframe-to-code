@@ -84,7 +84,7 @@ function ImageUpload() {
   };
 
   return (
-    <div className="mt-10">
+    <div className="mt-10  ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {!previewIrl ? (
           <div className="p-7 border border-dashed rounded-md shadow-md flex flex-col items-center justify-center">
@@ -132,7 +132,7 @@ function ImageUpload() {
             </SelectTrigger>
             <SelectContent>
               {Constants?.AiModelList.map((model, index) => (
-                <SelectItem key={index} value={model.name}>
+                <SelectItem key={index} value={model.name} disabled={model.name !== "Gemini Google"}>
                   <div className="flex items-center gap-2">
                     <Image
                       src={model.icon}

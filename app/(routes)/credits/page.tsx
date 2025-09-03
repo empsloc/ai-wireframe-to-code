@@ -33,7 +33,7 @@ function Credits() {
             toast("Will add this functionality soon...");
           }}
         >
-          But more credits
+          Buy more credits
         </Button>
       </div>
     </div>

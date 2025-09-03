@@ -12,7 +12,8 @@ function SelectionDetail({ record, regenerateCode, isReady }: any) {
 
   return (
     record && (
-      <div className="p-5 bg-gray-100 rounded-lg">
+      <div className="p-5 bg--100 rounded-lg min-h-screen flex flex-col  justify-between">
+        <div>
         <h2 className="font-bold my-2">Wireframe</h2>
         <Image
           src={record?.imageUrl}
@@ -35,11 +36,12 @@ function SelectionDetail({ record, regenerateCode, isReady }: any) {
           disabled={true}
           className="bg-white h-[180px]"
         />
+        </div>
 
         <Button
           disabled={!isReady || !user}
           onClick={regenerateCode}
-          className="mt-7 w-full"
+          className="mb-52 w-full"
         >
           <RefreshCcw />
           Regenerate Code
